@@ -21,11 +21,20 @@ public class TicketMachine
     /**
      * Create a machine that issues tickets of the given price.
      */
+    
     public TicketMachine(int cost)
     {
         price = cost;
         balance = 0;
         total = 0;
+    }
+    /**
+     * Devuelve el dinero que hace falta meter para poder imprimir un ticket
+     */
+    public int getAmountLeftToPay()
+    {   int amountLeftToPay;
+        amountLeftToPay = price - balance;
+        return amountLeftToPay;
     }
 
     /**
@@ -56,7 +65,7 @@ public class TicketMachine
         }
         else {
             System.out.println("Use a positive amount rather than: " +
-                               amount);
+                amount);
         }
     }
 
@@ -83,8 +92,8 @@ public class TicketMachine
         }
         else {
             System.out.println("You must insert at least: " +
-                               (price - balance) + " more cents.");
-                    
+                (price - balance) + " more cents.");
+
         }
     }
 
