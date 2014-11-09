@@ -1,5 +1,4 @@
-/**
- * TicketMachine models a ticket machine that issues
+/* TicketMachine models a ticket machine that issues
  * flat-fare tickets.
  * The price of a ticket is specified via the constructor.
  * Instances will check to ensure that a user only enters
@@ -108,4 +107,14 @@ public class TicketMachine
         balance = 0;
         return amountToRefund;
     }
+    public int emptyMachine()
+    {
+        int emptyMachine;
+        emptyMachine = total;
+        total = 0;
+        return emptyMachine;
+        
+        
+    }
+   
 }
