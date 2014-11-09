@@ -22,11 +22,12 @@ public class TicketMachine
      */
     
     public TicketMachine(int cost)
-    {
+    { 
         price = cost;
         balance = 0;
         total = 0;
     }
+
     /**
      * Devuelve el dinero que hace falta meter para poder imprimir un ticket
      */
@@ -59,7 +60,7 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        if(amount > 0) {
+        if(amount > 0.0) {
             balance = balance + amount;
         }
         else {
@@ -118,6 +119,10 @@ public class TicketMachine
         return emptyMachine;
         
         
+    }
+    public void percentMachine()
+    {
+        price = price-(price*10/100);
     }
    
 }
